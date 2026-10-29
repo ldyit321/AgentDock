@@ -1,0 +1,17 @@
+# 手写文本在仓库中统一LF，避免跨Windows/Linux时出现整文件换行差异。
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+*.vue text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.html text eol=lf
+*.ps1 text eol=crlf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.pdf binary

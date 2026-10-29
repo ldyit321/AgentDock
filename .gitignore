@@ -1,0 +1,35 @@
+# 本机密钥与配置；示例文件仅允许无秘密占位内容。
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+
+# 临时验证、依赖缓存、回退副本和用户运行数据。
+/work/
+/data/
+/.superpowers/
+/.worktrees/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+*.log
+
+# 本机编辑器和操作系统杂项。
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
