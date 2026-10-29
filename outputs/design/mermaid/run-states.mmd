@@ -1,0 +1,35 @@
+stateDiagram-v2
+  [*] --> queued
+  queued --> preparing
+  preparing --> running
+  running --> validating
+  validating --> succeeded
+  validating --> running: 允许修复
+  running --> waiting_user
+  running --> waiting_approval
+  waiting_user --> resuming: 已保存答复
+  waiting_approval --> resuming: 已保存决策
+  resuming --> running
+  waiting_user --> expired
+  waiting_approval --> resuming: 拒绝或审批过期结果
+  queued --> cancelling
+  preparing --> cancelling
+  running --> cancelling
+  validating --> cancelling
+  waiting_user --> cancelling
+  waiting_approval --> cancelling
+  resuming --> cancelling
+  cancelling --> cancelled
+  preparing --> failed
+  running --> failed
+  validating --> failed
+  resuming --> failed
+  running --> interrupted: 崩溃或副作用未知
+  preparing --> interrupted
+  resuming --> interrupted
+  validating --> interrupted
+  succeeded --> [*]
+  failed --> [*]
+  cancelled --> [*]
+  interrupted --> [*]
+  expired --> [*]
