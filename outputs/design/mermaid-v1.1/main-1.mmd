@@ -1,0 +1,17 @@
+flowchart TB
+  Browser[Vue 3 用户网页] -->|Cookie / REST / SSE| API[FastAPI 应用服务]
+  API -->|业务事务和授权| DB[(MongoDB 业务集合)]
+  DB -->|持久队列领取| Worker[单进程异步 Worker]
+  Worker --> Graph[LangGraph / AI Harness]
+  Graph -->|检查点| CP[(MongoDB 检查点集合)]
+  Graph -->|必要上下文| LLM[模型适配器]
+  Graph --> Gate[工具权限 / 预算 / 审批]
+  Gate --> MCP[MCP 客户端]
+  Gate --> SB[Sandbox 适配器]
+  SB --> Server[OpenSandbox 生命周期 API]
+  SB -->|当前直连模式| Instance[当前 Run 的 Sandbox]
+  Server -->|创建 / 销毁| Instance
+  API --> FS[本地文件服务]
+  Graph --> FS
+  FS --> UserFiles[(D 盘用户和对话空间)]
+  MCP --> External[获授权外部系统]

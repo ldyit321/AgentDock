@@ -1,0 +1,14 @@
+sequenceDiagram
+  participant W as Worker / Graph
+  participant DB as 业务库与检查点
+  participant UI as 用户网页
+  W->>DB: 幂等建立 Question(preparing)
+  W->>DB: 记录工作快照及清理结果
+  W->>DB: await_human interrupt 保存检查点
+  W->>DB: 确认 checkpoint，Question=open，Run=waiting_user
+  UI->>DB: 经 API 验证归属并保存回答
+  Note over UI,DB: 实际由 API 执行，网页不直接访问数据库
+  W->>DB: 领取待恢复 Run，核对检查点与回答
+  W->>W: Command(resume=内部答复引用)
+  W->>W: 需要时重建 Sandbox / 恢复文件
+  W->>DB: 配对工具结果并继续运行
