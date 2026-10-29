@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "AgentDock 技术设计：组件与调用边界（建议稿）",
+    "locale": "zh-CN",
+    "output": "outputs/design/architecture/agentdock-architecture.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "web",
+      "type": "frontend",
+      "label": "用户网页",
+      "sublabel": "对话 · 文件 · Skill · MCP",
+      "pos": [
+        380,
+        30
+      ],
+      "size": [
+        220,
+        76
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "FastAPI 应用服务",
+      "sublabel": "身份校验 · 业务 API · 事件",
+      "pos": [
+        380,
+        230
+      ],
+      "size": [
+        220,
+        76
+      ]
+    },
+    {
+      "id": "postgres",
+      "type": "database",
+      "label": "PostgreSQL",
+      "sublabel": "业务 · 队列 · 检查点",
+      "pos": [
+        40,
+        230
+      ],
+      "size": [
+        220,
+        76
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "LangGraph 执行 Worker",
+      "sublabel": "权限 · 预算 · 人工交互",
+      "pos": [
+        380,
+        440
+      ],
+      "size": [
+        220,
+        88
+      ]
+    },
+    {
+      "id": "files",
+      "type": "database",
+      "label": "D 盘用户文件空间",
+      "sublabel": "输入 · 工作快照 · 产物",
+      "pos": [
+        40,
+        440
+      ],
+      "size": [
+        220,
+        88
+      ]
+    },
+    {
+      "id": "model",
+      "type": "external",
+      "label": "可配置的模型服务",
+      "sublabel": "只提供脱敏上下文与工具",
+      "pos": [
+        720,
+        440
+      ],
+      "size": [
+        220,
+        88
+      ]
+    },
+    {
+      "id": "mcp",
+      "type": "external",
+      "label": "用户与共享 MCP",
+      "sublabel": "按用户授权 · 写操作确认",
+      "pos": [
+        720,
+        710
+      ],
+      "size": [
+        220,
+        88
+      ]
+    },
+    {
+      "id": "sandbox-server",
+      "type": "cloud",
+      "label": "OpenSandbox Server",
+      "sublabel": "WSL2 / Docker Desktop",
+      "pos": [
+        380,
+        710
+      ],
+      "size": [
+        220,
+        88
+      ]
+    },
+    {
+      "id": "sandbox",
+      "type": "backend",
+      "label": "当前运行专属 Sandbox",
+      "sublabel": "代码 · 输入 · 依赖 · 结果",
+      "pos": [
+        380,
+        960
+      ],
+      "size": [
+        220,
+        88
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "web-api",
+      "from": "web",
+      "to": "api",
+      "label": "登录 / REST / SSE",
+      "variant": "emphasis"
+    },
+    {
+      "id": "api-db",
+      "from": "api",
+      "to": "postgres",
+      "label": "归属与业务事务"
+    },
+    {
+      "id": "worker-db",
+      "from": "worker",
+      "to": "postgres",
+      "label": "领取 / 事件 / 检查点",
+      "fromSide": "left",
+      "toSide": "bottom"
+    },
+    {
+      "id": "worker-files",
+      "from": "worker",
+      "to": "files",
+      "label": "受控快照与恢复"
+    },
+    {
+      "id": "worker-model",
+      "from": "worker",
+      "to": "model",
+      "label": "上下文 / 工具决策"
+    },
+    {
+      "id": "worker-mcp",
+      "from": "worker",
+      "to": "mcp",
+      "label": "授权与审批后调用",
+      "variant": "security",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "worker-server",
+      "from": "worker",
+      "to": "sandbox-server",
+      "label": "SDK 生命周期 / 文件",
+      "variant": "emphasis"
+    },
+    {
+      "id": "server-sandbox",
+      "from": "sandbox-server",
+      "to": "sandbox",
+      "label": "创建与销毁 / TTL",
+      "variant": "emphasis"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "MVP 部署建议",
+      "items": [
+        "Windows 上一个 API 进程与一个 Worker 进程",
+        "PostgreSQL 提供持久队列，不引入 Redis/Celery",
+        "Worker 轮询数据库，API 不直接派发长任务"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "隔离与工具控制",
+      "items": [
+        "每个用户和对话有独立文件空间",
+        "Question Human 与审批持久化，等待释放执行槽",
+        "MCP 凭据不进入模型或 Sandbox"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "实测与待验证",
+      "items": [
+        "已通过 SDK 直连、文件、执行、下载及销毁验证",
+        "Server 代理路径曾 502，原生 argv 曾 400",
+        "Worker 直连实例映射端口，图中以 SDK 分支概括"
+      ]
+    }
+  ]
+}

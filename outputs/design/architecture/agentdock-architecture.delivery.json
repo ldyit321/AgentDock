@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "876ab2b7-07f4-429b-972c-81ccc09ca4b3",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "D:\\Projects\\AgentDock\\outputs\\design\\architecture\\candidate.json",
+  "output": "D:\\Projects\\AgentDock\\outputs\\design\\architecture\\agentdock-architecture.html",
+  "specification": {
+    "sha256": "0cc9ae9573d1019e1093192c8af5d99a245387f8c6b8c20bc2bb5baae416912f",
+    "bytes": 4907
+  },
+  "artifact": {
+    "sha256": "176b5ef22af53de390c69bcbede21235678e852bb0d736d2d1670e3a7de74134",
+    "bytes": 761186
+  }
+}
