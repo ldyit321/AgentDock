@@ -1,0 +1,739 @@
+{
+  "source_root": "D:\\Work\\skills",
+  "skills": [
+    {
+      "name": "assembly-modeling",
+      "path": "D:\\Work\\skills\\assembly-modeling\\SKILL.md",
+      "lines": 81,
+      "sha256": "c102818d4c9f5cc1abecd59a321c2906b53db2aabf05de2e4af286a8f220fc53",
+      "python_scripts": 0,
+      "requirements": null
+    },
+    {
+      "name": "crowncad-modeling-assistant",
+      "path": "D:\\Work\\skills\\crowncad-modeling-assistant\\SKILL.md",
+      "lines": 110,
+      "sha256": "fda8120749457b5d8ecd77989405cea5f9335e4fc72d1d36a8244619d265765e",
+      "python_scripts": 0,
+      "requirements": null
+    },
+    {
+      "name": "crownscript-executor",
+      "path": "D:\\Work\\skills\\crownscript-executor\\SKILL.md",
+      "lines": 111,
+      "sha256": "caca663944b4e3309972f2b3344917be2dfa63a5c6e93a5fdd1c911627be33fb",
+      "python_scripts": 8,
+      "requirements": "# 仅 scripts/render_topology.py 的拓扑预览需要。\nPillow>=11,<13"
+    },
+    {
+      "name": "engineering-drawing-analysis",
+      "path": "D:\\Work\\skills\\engineering-drawing-analysis\\SKILL.md",
+      "lines": 200,
+      "sha256": "8e4b73ca180419dad16055f08503cdcf5013dcdb4de8b90e056bc6099fe54974",
+      "python_scripts": 0,
+      "requirements": null
+    },
+    {
+      "name": "model-geometry-analysis",
+      "path": "D:\\Work\\skills\\model-geometry-analysis\\SKILL.md",
+      "lines": 24,
+      "sha256": "d45e5d0eab383771f9587ce83dbeb10937cbe2868ee8699e3e50a637a1272b93",
+      "python_scripts": 2,
+      "requirements": "# Validated together on Windows x64 / Python 3.14.7.\n# Other OS/Python combinations require the environment smoke check.\ncadquery-ocp==8.0.1.1.0\nmatplotlib==3.11.2\nnumpy==2.5.3"
+    },
+    {
+      "name": "modeling-case-library",
+      "path": "D:\\Work\\skills\\modeling-case-library\\SKILL.md",
+      "lines": 10,
+      "sha256": "be701bb7f2a20014ea631a4a943747322e60616a1c0ca04b98649b04cf93da46",
+      "python_scripts": 4,
+      "requirements": null
+    },
+    {
+      "name": "standard-component-matching",
+      "path": "D:\\Work\\skills\\standard-component-matching\\SKILL.md",
+      "lines": 42,
+      "sha256": "295d1a57232041849a2887b94e39d4bab8ff8c2b8e4a1a43a09ba57eedebddb4",
+      "python_scripts": 1,
+      "requirements": null
+    },
+    {
+      "name": "step-model-acceptance",
+      "path": "D:\\Work\\skills\\step-model-acceptance\\SKILL.md",
+      "lines": 28,
+      "sha256": "81ef2b5179a64ec28033e954bfaa74dbcb3fc417ae499795dd1f395a304aeb25",
+      "python_scripts": 0,
+      "requirements": null
+    }
+  ],
+  "entry_links": [
+    {
+      "from": "assembly-modeling\\SKILL.md",
+      "target": "../engineering-drawing-analysis/SKILL.md",
+      "exists": true
+    },
+    {
+      "from": "assembly-modeling\\SKILL.md",
+      "target": "../crownscript-executor/SKILL.md",
+      "exists": true
+    },
+    {
+      "from": "assembly-modeling\\SKILL.md",
+      "target": "../crownscript-executor/references/assembly-modeling/assembly-modeling.md",
+      "exists": true
+    },
+    {
+      "from": "assembly-modeling\\SKILL.md",
+      "target": "../crownscript-executor/references/assembly-modeling/assembly-records.md",
+      "exists": true
+    },
+    {
+      "from": "assembly-modeling\\SKILL.md",
+      "target": "../model-geometry-analysis/SKILL.md",
+      "exists": true
+    },
+    {
+      "from": "assembly-modeling\\SKILL.md",
+      "target": "references/mechanical-connections.md",
+      "exists": true
+    },
+    {
+      "from": "assembly-modeling\\SKILL.md",
+      "target": "../crownscript-executor/references/assembly-modeling/assembly-records.md",
+      "exists": true
+    },
+    {
+      "from": "assembly-modeling\\SKILL.md",
+      "target": "../crownscript-executor/references/assembly-modeling/assembly-modeling.md#6-装配验收流程",
+      "exists": true
+    },
+    {
+      "from": "assembly-modeling\\SKILL.md",
+      "target": "../crownscript-executor/references/assembly-modeling/assembly-modeling.md#422-全部实例矩阵collect_assembly_transforms",
+      "exists": true
+    },
+    {
+      "from": "crowncad-modeling-assistant\\SKILL.md",
+      "target": "../crownscript-executor/SKILL.md",
+      "exists": true
+    },
+    {
+      "from": "crowncad-modeling-assistant\\SKILL.md",
+      "target": "references/operating-decisions.md",
+      "exists": true
+    },
+    {
+      "from": "crowncad-modeling-assistant\\SKILL.md",
+      "target": "../crownscript-executor/references/execution-workflow.md#11-累计源脚本阶段与修订",
+      "exists": true
+    },
+    {
+      "from": "crowncad-modeling-assistant\\SKILL.md",
+      "target": "../modeling-case-library/references/case-workflow.md#2-开始任务先看案例再决定方法",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "../modeling-case-library/references/case-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/datum-constraints.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/entity-modeling/entity-modeling.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/sketch-modeling/sketch-modeling.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/curve-modeling/curve-modeling.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/surface-modeling/surface-modeling.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/assembly-modeling/assembly-modeling.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/assembly-modeling/assembly-modeling.md#42-查询装配结构getassemblystruct",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/assembly-modeling/assembly-records.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/common-modeling.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/execution-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/execution-workflow.md#21-建模过程中的视角展示",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/verification-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "../modeling-case-library/references/case-workflow.md#2-开始任务先看案例再决定方法",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "scripts/extract_topology.py",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/entity-modeling/details/topology-layer-design.md#本地业务数据提取",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/execution-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/verification-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/entity-modeling/details/topology-layer-design.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/entity-modeling/details/topology-and-features.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/entity-modeling/details/topology-and-features.md#面类型与空间语义",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/verification-workflow.md#41-视口截图与跨环境证据保存",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/assembly-modeling/assembly-modeling.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/assembly-modeling/assembly-modeling.md#422-全部实例矩阵collect_assembly_transforms",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/assembly-modeling/assembly-modeling.md#410-静态干涉检查check_interference",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/entity-modeling/details/solid-modeling.md#圆角调用示例",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/entity-modeling/details/feature-modeling.md#抽壳调用示例",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/surface-modeling/surface-modeling.md#7-填充曲面surfacefillsurface",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "../modeling-case-library/references/case-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/execution-workflow.md#51-跨机器文件交付与证据使用",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/execution-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/verification-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "../modeling-case-library/references/case-workflow.md#4-完成任务核对最终版本并询问保存",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/execution-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "crownscript-executor\\SKILL.md",
+      "target": "references/execution-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "engineering-drawing-analysis\\SKILL.md",
+      "target": "references/state-file-schema.md",
+      "exists": true
+    },
+    {
+      "from": "engineering-drawing-analysis\\SKILL.md",
+      "target": "references/state-file-schema.md",
+      "exists": true
+    },
+    {
+      "from": "model-geometry-analysis\\SKILL.md",
+      "target": "references/step-analysis.md",
+      "exists": true
+    },
+    {
+      "from": "model-geometry-analysis\\SKILL.md",
+      "target": "references/topo-analysis.md",
+      "exists": true
+    },
+    {
+      "from": "model-geometry-analysis\\SKILL.md",
+      "target": "references/environment.md",
+      "exists": true
+    },
+    {
+      "from": "modeling-case-library\\SKILL.md",
+      "target": "references/case-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "standard-component-matching\\SKILL.md",
+      "target": "references/component-rules.md",
+      "exists": true
+    },
+    {
+      "from": "standard-component-matching\\SKILL.md",
+      "target": "references/filter-output.md",
+      "exists": true
+    },
+    {
+      "from": "standard-component-matching\\SKILL.md",
+      "target": "references/standard-component-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "standard-component-matching\\SKILL.md",
+      "target": "../engineering-drawing-analysis/SKILL.md",
+      "exists": true
+    },
+    {
+      "from": "standard-component-matching\\SKILL.md",
+      "target": "references/component-rules.md",
+      "exists": true
+    },
+    {
+      "from": "standard-component-matching\\SKILL.md",
+      "target": "references/filter-output.md",
+      "exists": true
+    },
+    {
+      "from": "standard-component-matching\\SKILL.md",
+      "target": "references/standard-component-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "step-model-acceptance\\SKILL.md",
+      "target": "references/acceptance-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "step-model-acceptance\\SKILL.md",
+      "target": "../model-geometry-analysis/SKILL.md",
+      "exists": true
+    },
+    {
+      "from": "step-model-acceptance\\SKILL.md",
+      "target": "../model-geometry-analysis/references/step-analysis.md",
+      "exists": true
+    },
+    {
+      "from": "step-model-acceptance\\SKILL.md",
+      "target": "../crownscript-executor/references/verification-workflow.md",
+      "exists": true
+    },
+    {
+      "from": "step-model-acceptance\\SKILL.md",
+      "target": "../crownscript-executor/references/assembly-modeling/assembly-modeling.md#6-装配验收流程",
+      "exists": true
+    }
+  ],
+  "all_files": [
+    {
+      "path": "assembly-modeling/references/mechanical-connections.md",
+      "bytes": 8049,
+      "sha256": "9ab8921cf572f1419b0976f9a310fa0a0dd1bad91e43a609b132f3ac8872a4a2"
+    },
+    {
+      "path": "assembly-modeling/SKILL.md",
+      "bytes": 7958,
+      "sha256": "c102818d4c9f5cc1abecd59a321c2906b53db2aabf05de2e4af286a8f220fc53"
+    },
+    {
+      "path": "crowncad-modeling-assistant/agents/openai.yaml",
+      "bytes": 173,
+      "sha256": "a4ede422232e5de0ad7e527cc103454501361ec393ee128d9d9bc6b67f3532ad"
+    },
+    {
+      "path": "crowncad-modeling-assistant/references/operating-decisions.md",
+      "bytes": 5207,
+      "sha256": "66cd7010de7295b8e2f8f183bd6de7dad557fa453135ea0f70acd0ac3e61bdcd"
+    },
+    {
+      "path": "crowncad-modeling-assistant/SKILL.md",
+      "bytes": 13821,
+      "sha256": "fda8120749457b5d8ecd77989405cea5f9335e4fc72d1d36a8244619d265765e"
+    },
+    {
+      "path": "crownscript-executor/agents/openai.yaml",
+      "bytes": 160,
+      "sha256": "fc835693c9b12ab9a7a62159886f3e3e28e05d7b82f39f7fb74180fcc945671e"
+    },
+    {
+      "path": "crownscript-executor/evals/evals.json",
+      "bytes": 25255,
+      "sha256": "6662303e7f0eee24017d9a97e19b072730bc6fa521838672e652a0edebb4e6d5"
+    },
+    {
+      "path": "crownscript-executor/README.md",
+      "bytes": 5246,
+      "sha256": "17a3415a785ed76fa3e350c42b46cd22fae9c061c5b9c62b244a2cbae94326b9"
+    },
+    {
+      "path": "crownscript-executor/references/assembly-modeling/assembly-modeling.md",
+      "bytes": 26000,
+      "sha256": "905d9eab3a2664a110027961bbbf10ab973edc8fcb1d9cd1ec45c9ebd673937b"
+    },
+    {
+      "path": "crownscript-executor/references/assembly-modeling/assembly-records.md",
+      "bytes": 14834,
+      "sha256": "7aa121f10b3273fdb9f79658ad09082747a7ab1176f33e6e99b4468cddff716e"
+    },
+    {
+      "path": "crownscript-executor/references/common-modeling.md",
+      "bytes": 8464,
+      "sha256": "7096a5195ecd29a964f98aae9a383c4f62594a44de00fcd7fcc11c3ae007dba5"
+    },
+    {
+      "path": "crownscript-executor/references/curve-modeling/curve-modeling.md",
+      "bytes": 6377,
+      "sha256": "54bb12056f45d512869735da9a36de0f8de129f9d6049737d1a2a870e3d40e7b"
+    },
+    {
+      "path": "crownscript-executor/references/datum-constraints.md",
+      "bytes": 9495,
+      "sha256": "d7d20650c42c5444d5e434517449b6548e0aa8fc7379be1f398c25bbaf600c6e"
+    },
+    {
+      "path": "crownscript-executor/references/entity-modeling/details/circular-pattern.md",
+      "bytes": 6552,
+      "sha256": "34acac7f1b237b6250ad13257d83fcae462ab504b566d0334513cbb5e2d48d6a"
+    },
+    {
+      "path": "crownscript-executor/references/entity-modeling/details/delete-faces.md",
+      "bytes": 2080,
+      "sha256": "987cdf498b9cb1ef5cf95e51f6b606ea61e83f76aa343d5dac539b164ab8cabb"
+    },
+    {
+      "path": "crownscript-executor/references/entity-modeling/details/feature-modeling.md",
+      "bytes": 27503,
+      "sha256": "5c793444bf110cfba682f6269303ef91bade4871061b380cacfe18c456bb8a5d"
+    },
+    {
+      "path": "crownscript-executor/references/entity-modeling/details/linear-pattern.md",
+      "bytes": 7725,
+      "sha256": "ad0bf028ea9da7416bedcfb8e071c3acd7638c7ceb57676a6741178fe6ccd9cd"
+    },
+    {
+      "path": "crownscript-executor/references/entity-modeling/details/mirror-modeling.md",
+      "bytes": 3901,
+      "sha256": "7c793740f5f87ac3e0754007b8f8c1f15607d02a97ab6fd263dcebc118302ed7"
+    },
+    {
+      "path": "crownscript-executor/references/entity-modeling/details/shell-and-followup.md",
+      "bytes": 6726,
+      "sha256": "9669b33b41208e40a2255ff206b2dd344fd84f806ebd9500550680662e1a9926"
+    },
+    {
+      "path": "crownscript-executor/references/entity-modeling/details/solid-modeling.md",
+      "bytes": 10855,
+      "sha256": "4f627afd55dd2594d3523db687b08c031db31cb6eb4b045f8474c496f2f43287"
+    },
+    {
+      "path": "crownscript-executor/references/entity-modeling/details/topology-and-features.md",
+      "bytes": 7104,
+      "sha256": "7231dbe9c4ffc516bc6b4aa42aced7f254c50884c8ed6bd168607a2c23aa3799"
+    },
+    {
+      "path": "crownscript-executor/references/entity-modeling/details/topology-layer-design.md",
+      "bytes": 10870,
+      "sha256": "a10a58f85d8ac4bf1a7cfdccf8b6913147b0fd936f929476f2b74c5c4945e8ae"
+    },
+    {
+      "path": "crownscript-executor/references/entity-modeling/entity-modeling.md",
+      "bytes": 8551,
+      "sha256": "d961a54c84b7b8d3fe4e9307ac3264990ca1bbee494a0b7cd43eb1104ea2feb0"
+    },
+    {
+      "path": "crownscript-executor/references/execution-workflow.md",
+      "bytes": 28643,
+      "sha256": "207af5707e84dc0a053d13a4995dab594148a995b46fd05604adc08bfccaf2a1"
+    },
+    {
+      "path": "crownscript-executor/references/sketch-modeling/details/contour-validation.md",
+      "bytes": 2154,
+      "sha256": "072ecd5dba1b12173b1470f4062c14e1d8a579a3359e351baa5a4d08eb50b45f"
+    },
+    {
+      "path": "crownscript-executor/references/sketch-modeling/details/plane-and-coordinates.md",
+      "bytes": 1864,
+      "sha256": "f399f52ef7fe440c0ea6b32c4f133419e29cf8fee495284cfc18fd337c3b494e"
+    },
+    {
+      "path": "crownscript-executor/references/sketch-modeling/details/slots.md",
+      "bytes": 2464,
+      "sha256": "f924031f3bb00847025f74bf013f0b8b0578ad71e27efc91dcd252434cd009a0"
+    },
+    {
+      "path": "crownscript-executor/references/sketch-modeling/details/spline.md",
+      "bytes": 1233,
+      "sha256": "682068e2c91016d350cdb8bde05513453d8bbab53f5e6ed3848d5828cbb78288"
+    },
+    {
+      "path": "crownscript-executor/references/sketch-modeling/sketch-modeling.md",
+      "bytes": 40947,
+      "sha256": "18d67aff9f79525c66ce310182011af95d4a825e22fb5fe9b9e738325397759f"
+    },
+    {
+      "path": "crownscript-executor/references/surface-modeling/local-transition-reconstruction.md",
+      "bytes": 9026,
+      "sha256": "e3b3163fde656c17ce0a749c42a9ba330195ca9ce7df593b8fa75d7d9ff3cf9b"
+    },
+    {
+      "path": "crownscript-executor/references/surface-modeling/surface-modeling.md",
+      "bytes": 19860,
+      "sha256": "ee2b89bff8ca5fb6e6b37472537750d170a46d27382691881f2991904caf0413"
+    },
+    {
+      "path": "crownscript-executor/references/verification-workflow.md",
+      "bytes": 22141,
+      "sha256": "cae2532b680e0dbe64de92d317a49051cbaff610311e4ebb5e427b8b982144be"
+    },
+    {
+      "path": "crownscript-executor/requirements.txt",
+      "bytes": 75,
+      "sha256": "049fdffa435184e337661fe3c1bc62c6d8d84966682a8f3fa2c1ee11f1a4437e"
+    },
+    {
+      "path": "crownscript-executor/scripts/__init__.py",
+      "bytes": 44,
+      "sha256": "1687bd1fe73296b5acd5b04fd922032114585de4e3616934ec5c192cf3e8ed88"
+    },
+    {
+      "path": "crownscript-executor/scripts/assembly_verification.py",
+      "bytes": 21837,
+      "sha256": "d21a26a34c00aeec8ca24d19c0e2f70cb0c6de1ff73b9b066ee296f9e59d28ff"
+    },
+    {
+      "path": "crownscript-executor/scripts/extract_topology.py",
+      "bytes": 7050,
+      "sha256": "1d2a8ad20584a33703f3500fd788def3e18e1c51dc3903623428d612c7db62a2"
+    },
+    {
+      "path": "crownscript-executor/scripts/geometry_measurements.py",
+      "bytes": 14610,
+      "sha256": "5bec34d0e3c4f10caa80de28cf6c0514c65bddbde40c35bb2750e1343ccfd4cc"
+    },
+    {
+      "path": "crownscript-executor/scripts/render_topology.py",
+      "bytes": 20254,
+      "sha256": "3d6a1d29bc859473069d509ada0ce1e2a17769b78ff36b3c97ccee8198ec463f"
+    },
+    {
+      "path": "crownscript-executor/scripts/sketch_plane.py",
+      "bytes": 5344,
+      "sha256": "a0ba67f30ffa35cd6e8e57a462a17d03dbbcee606e7ec961c52add8a36239606"
+    },
+    {
+      "path": "crownscript-executor/scripts/sketch_slot.py",
+      "bytes": 6065,
+      "sha256": "fbba48cbb4a26a525de2a3c925fece54f0f5d99987aef433ea7fc6924c1ee6a4"
+    },
+    {
+      "path": "crownscript-executor/scripts/verification.py",
+      "bytes": 16441,
+      "sha256": "69ef61d0ebba074288c03b99d6ab409686ca56bdb1d6928c3457b120875d7203"
+    },
+    {
+      "path": "crownscript-executor/SKILL.md",
+      "bytes": 18475,
+      "sha256": "caca663944b4e3309972f2b3344917be2dfa63a5c6e93a5fdd1c911627be33fb"
+    },
+    {
+      "path": "engineering-drawing-analysis/references/state-file-schema.md",
+      "bytes": 9540,
+      "sha256": "1b4c912a2952508f06db960599142c56aab5bbd6b6bbfe9c4f3530a2c6d3c88f"
+    },
+    {
+      "path": "engineering-drawing-analysis/SKILL.md",
+      "bytes": 20916,
+      "sha256": "8e4b73ca180419dad16055f08503cdcf5013dcdb4de8b90e056bc6099fe54974"
+    },
+    {
+      "path": "model-geometry-analysis/agents/openai.yaml",
+      "bytes": 289,
+      "sha256": "2301ee9fc589f05701e27d6b8018f010e1b5132928c81970a2f8aa2547e505b2"
+    },
+    {
+      "path": "model-geometry-analysis/references/environment.md",
+      "bytes": 1725,
+      "sha256": "2f54a5f4866554fcd585d041625e2cf393a60da6e7b7eddd2d7d7cc879bd3ace"
+    },
+    {
+      "path": "model-geometry-analysis/references/step-analysis.md",
+      "bytes": 2549,
+      "sha256": "1e658fb0b16f96f1d9fc0532a1e54b27ac8d3e3f066cbb3e40b710a1efba5c74"
+    },
+    {
+      "path": "model-geometry-analysis/references/topo-analysis.md",
+      "bytes": 1507,
+      "sha256": "c895d9e4b0dd0df962c462127b0086ac8721c736626ff590552cee0326e6d8b8"
+    },
+    {
+      "path": "model-geometry-analysis/requirements.txt",
+      "bytes": 182,
+      "sha256": "66454207015375ad6c59d5f32782640cdab16f36a7cbcdf5fa4960173f9f9cc6"
+    },
+    {
+      "path": "model-geometry-analysis/scripts/environment.py",
+      "bytes": 4400,
+      "sha256": "7a8d7d1d5909748b4385d47a55ff8f2fa49c060fd9dccda6d3569e8d6f2d7536"
+    },
+    {
+      "path": "model-geometry-analysis/scripts/render_step.py",
+      "bytes": 9405,
+      "sha256": "2692f9e505b591c8188fc73c398c395d2fa73adedabd2ff380763e9a85ecf76b"
+    },
+    {
+      "path": "model-geometry-analysis/SKILL.md",
+      "bytes": 2153,
+      "sha256": "d45e5d0eab383771f9587ce83dbeb10937cbe2868ee8699e3e50a637a1272b93"
+    },
+    {
+      "path": "modeling-case-library/agents/openai.yaml",
+      "bytes": 132,
+      "sha256": "21f031a332d6f798624ada51f50f98de5dcf041fac3b85e4a8b8c6c58c2eedbc"
+    },
+    {
+      "path": "modeling-case-library/references/case-workflow.md",
+      "bytes": 20148,
+      "sha256": "0f6be0faaeaa6bcb85ed9e38a2448990a846b78b05767bfa73e368c194d9475b"
+    },
+    {
+      "path": "modeling-case-library/scripts/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "modeling-case-library/scripts/find_cases.py",
+      "bytes": 1763,
+      "sha256": "2ac3e79a5242dc33e64cc698f81b1d8b6224df0ecd03c665c8afa78f3b661303"
+    },
+    {
+      "path": "modeling-case-library/scripts/model_case_library.py",
+      "bytes": 24807,
+      "sha256": "9d73ea0c3cb228f43581b54f658daaf035e85fd09e389b9b7af68190727fdcb6"
+    },
+    {
+      "path": "modeling-case-library/scripts/save_case.py",
+      "bytes": 1946,
+      "sha256": "f2235bb56138360a2a5fb4d7466ddfbe7b3fba4404fd7a41cc8479abf211d150"
+    },
+    {
+      "path": "modeling-case-library/SKILL.md",
+      "bytes": 702,
+      "sha256": "be701bb7f2a20014ea631a4a943747322e60616a1c0ca04b98649b04cf93da46"
+    },
+    {
+      "path": "standard-component-matching/references/component-rules.md",
+      "bytes": 7394,
+      "sha256": "a01c329f1e16c8acf5db2947e757005a139c2e1f2f1b5cae6ec938eeb84deed3"
+    },
+    {
+      "path": "standard-component-matching/references/filter-output.md",
+      "bytes": 3916,
+      "sha256": "7cb71510c23119cecda4015f6ea13c64bfa62c4b093d2b872906a861b052f537"
+    },
+    {
+      "path": "standard-component-matching/references/standard-component-workflow.md",
+      "bytes": 1872,
+      "sha256": "e35fba52342d6ff1359808f996259897c1c163c0621b3f6706582495b7fdc40c"
+    },
+    {
+      "path": "standard-component-matching/scripts/standard_component_tool.py",
+      "bytes": 7594,
+      "sha256": "a86ad6eafc99ff3a4d2e36e895ca9d83cacc48cf69da470210ce4306343be07a"
+    },
+    {
+      "path": "standard-component-matching/SKILL.md",
+      "bytes": 4492,
+      "sha256": "295d1a57232041849a2887b94e39d4bab8ff8c2b8e4a1a43a09ba57eedebddb4"
+    },
+    {
+      "path": "step-model-acceptance/agents/openai.yaml",
+      "bytes": 276,
+      "sha256": "8fed5a793e3933b5cd1d3a2b011bf103cbb1cb7f8006b5807d1cb21e53d0a6ac"
+    },
+    {
+      "path": "step-model-acceptance/references/acceptance-workflow.md",
+      "bytes": 6497,
+      "sha256": "1cdd15631d08b46ac6a2d020d0e062c3c5db6af683455335f8f6a203bf77f98c"
+    },
+    {
+      "path": "step-model-acceptance/SKILL.md",
+      "bytes": 2605,
+      "sha256": "81ef2b5179a64ec28033e954bfaa74dbcb3fc417ae499795dd1f395a304aeb25"
+    }
+  ],
+  "assessment_method": "static-read-only; no skill script, model, CAD, authentication or network execution"
+}
