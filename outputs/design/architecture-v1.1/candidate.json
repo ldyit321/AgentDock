@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "AgentDock v1.1：Vue 3、MongoDB 与工具执行边界",
+    "locale": "zh-CN",
+    "output": "outputs/design/architecture-v1.1/agentdock-architecture.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "web",
+      "type": "frontend",
+      "label": "用户网页",
+      "sublabel": "Vue 3 · JS · Element Plus",
+      "pos": [
+        380,
+        30
+      ],
+      "size": [
+        220,
+        76
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "FastAPI 应用服务",
+      "sublabel": "身份校验 · 业务 API · 事件",
+      "pos": [
+        380,
+        230
+      ],
+      "size": [
+        220,
+        76
+      ]
+    },
+    {
+      "id": "mongo",
+      "type": "database",
+      "label": "MongoDB 副本集",
+      "sublabel": "文档 · 队列 · 检查点",
+      "pos": [
+        40,
+        230
+      ],
+      "size": [
+        220,
+        76
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "LangGraph 执行 Worker",
+      "sublabel": "上下文 · 多模态 · 人工交互",
+      "pos": [
+        380,
+        440
+      ],
+      "size": [
+        220,
+        88
+      ]
+    },
+    {
+      "id": "files",
+      "type": "database",
+      "label": "文件存储适配",
+      "sublabel": "本地 D 盘 / 线上对象存储",
+      "pos": [
+        40,
+        440
+      ],
+      "size": [
+        220,
+        88
+      ]
+    },
+    {
+      "id": "model",
+      "type": "external",
+      "label": "可配置的模型服务",
+      "sublabel": "只提供脱敏上下文与工具",
+      "pos": [
+        720,
+        440
+      ],
+      "size": [
+        220,
+        88
+      ]
+    },
+    {
+      "id": "mcp",
+      "type": "external",
+      "label": "用户与共享 MCP",
+      "sublabel": "按用户授权 · 写操作确认",
+      "pos": [
+        720,
+        710
+      ],
+      "size": [
+        220,
+        88
+      ]
+    },
+    {
+      "id": "sandbox-server",
+      "type": "cloud",
+      "label": "OpenSandbox Server",
+      "sublabel": "WSL2 / Docker Desktop",
+      "pos": [
+        380,
+        710
+      ],
+      "size": [
+        220,
+        88
+      ]
+    },
+    {
+      "id": "sandbox",
+      "type": "backend",
+      "label": "当前运行专属 Sandbox",
+      "sublabel": "代码 · 输入 · 依赖 · 结果",
+      "pos": [
+        380,
+        960
+      ],
+      "size": [
+        220,
+        88
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "web-api",
+      "from": "web",
+      "to": "api",
+      "label": "登录 / REST / SSE",
+      "variant": "emphasis"
+    },
+    {
+      "id": "api-db",
+      "from": "api",
+      "to": "mongo",
+      "label": "归属与业务事务"
+    },
+    {
+      "id": "worker-db",
+      "from": "worker",
+      "to": "mongo",
+      "label": "领取 / 事件 / 检查点",
+      "fromSide": "left",
+      "toSide": "bottom"
+    },
+    {
+      "id": "worker-files",
+      "from": "worker",
+      "to": "files",
+      "label": "受控快照与恢复"
+    },
+    {
+      "id": "worker-model",
+      "from": "worker",
+      "to": "model",
+      "label": "上下文 / 工具决策"
+    },
+    {
+      "id": "worker-mcp",
+      "from": "worker",
+      "to": "mcp",
+      "label": "授权与审批后调用",
+      "variant": "security",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "worker-server",
+      "from": "worker",
+      "to": "sandbox-server",
+      "label": "SDK 生命周期 / 文件",
+      "variant": "emphasis"
+    },
+    {
+      "id": "server-sandbox",
+      "from": "sandbox-server",
+      "to": "sandbox",
+      "label": "创建与销毁 / TTL",
+      "variant": "emphasis"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "MVP 部署建议",
+      "items": [
+        "Vue 3 + JavaScript，UI 采纳 Element Plus",
+        "MongoDB 条件更新与必要事务，单机副本集不等于高可用",
+        "Worker 轮询持久队列，API 不直接派发长任务"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "隔离与工具控制",
+      "items": [
+        "SkillBundle 与 RuntimeProfile保持依赖和环境通用",
+        "OAuth / 外部视图 / 资源导入由已注册连接提供",
+        "文件不可变键 + 数据库版本控制，不用全局文件锁"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "实测与待验证",
+      "items": [
+        "已实测仍仅 SDK 文件执行与清理闭环",
+        "实际 8 Skill 已静态审阅，Linux与远端业务未测",
+        "上下文压缩与多模态按模型能力适配，不宣称已部署"
+      ]
+    }
+  ]
+}
