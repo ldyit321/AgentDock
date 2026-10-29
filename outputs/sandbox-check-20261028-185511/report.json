@@ -1,0 +1,46 @@
+{
+  "started_at": "2026-10-28T10:55:11.057534+00:00",
+  "sdk_version": "1.2.0",
+  "image": "opensandbox/code-interpreter:v1.1.0",
+  "use_server_proxy": false,
+  "command_transport": "shell-quoted fixed argv (v1.1.0 runtime rejects native argv)",
+  "passed": true,
+  "cleanup": "destroyed_and_404_verified",
+  "server_api_info": {
+    "title": "OpenSandbox Lifecycle API",
+    "description": "The Sandbox Lifecycle API coordinates how untrusted workloads are created, executed, paused, resumed, and finally disposed.",
+    "version": "0.1.0"
+  },
+  "sandbox_id": "e704d5c1-f069-4f9e-801e-d83a1cbe15c9",
+  "upload_roundtrip": true,
+  "success_execution": {
+    "stdout": "processed 3 values; sum=60",
+    "stderr": "diagnostic stderr sample",
+    "exit_code": 0,
+    "error": null,
+    "complete": {
+      "timestamp": 1793184904803,
+      "execution_time_in_millis": 62
+    }
+  },
+  "artifact_verified": true,
+  "failure_execution": {
+    "stdout": "",
+    "stderr": "intentional failure",
+    "exit_code": 7,
+    "error": {
+      "name": "CommandExecError",
+      "value": "7",
+      "timestamp": 1793184905863,
+      "traceback": [
+        "exit status 7"
+      ],
+      "exit_code": null
+    },
+    "complete": null
+  },
+  "failure_verified": true,
+  "checks_passed": true,
+  "post_delete_http_status": 404,
+  "finished_at": "2026-10-28T10:55:15.280348+00:00"
+}

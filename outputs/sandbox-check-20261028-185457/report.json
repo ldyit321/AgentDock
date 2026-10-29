@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-10-28T10:54:57.675161+00:00",
+  "sdk_version": "1.2.0",
+  "image": "opensandbox/code-interpreter:v1.1.0",
+  "use_server_proxy": false,
+  "passed": false,
+  "cleanup": "destroyed_and_404_verified",
+  "server_api_info": {
+    "title": "OpenSandbox Lifecycle API",
+    "description": "The Sandbox Lifecycle API coordinates how untrusted workloads are created, executed, paused, resumed, and finally disposed.",
+    "version": "0.1.0"
+  },
+  "sandbox_id": "c9ad0f51-3f24-40ab-a689-3b5486ef9933",
+  "upload_roundtrip": true,
+  "failure_type": "SandboxApiException",
+  "post_delete_http_status": 404,
+  "finished_at": "2026-10-28T10:54:59.827690+00:00"
+}
